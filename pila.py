@@ -31,9 +31,12 @@ class Pila:
             nodo.info = None
             nodo.siguiente = None
             return informacion
-
-
-
+        
+    def peek(self):
+        if self.cabeza is not None and self.cola is not None:
+            return self.cola.info
+        else:
+            return None
 
     def mostrar(self):
         actual = self.cabeza
@@ -41,13 +44,6 @@ class Pila:
             print(actual.info)
             actual = actual.siguiente
 
-pila = Pila()
-pila.push(10)
-pila.push(20)
-pila.push(30)
-pila.mostrar()
-print()
-pila.pop()
-pila.mostrar()
+
     
     
